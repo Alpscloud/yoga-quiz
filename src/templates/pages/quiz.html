@@ -1,0 +1,499 @@
+{% include '../parts/head.html' %}
+<body>
+	
+	<!-- CONTENT WRAPPER -->
+	<div class="content__wrapper">
+
+		<!-- Header -->
+		{% include '../parts/header.html' %}
+		<!-- //Header -->
+
+		<!-- Main -->
+		<main class="main">
+			<!-- Quiz -->
+			<section class="sect__quiz">
+				<h2 class="w3c">&nbsp;</h2>
+
+				<div class="container">
+					<!-- Quiz wrapper-->
+					<div class="quiz__wrapper text-center">
+
+						<!-- QUIZ -->
+						<div class="quiz js-quiz">
+
+							<form class="js-form form">
+
+								<!-- Hidden inputs -->
+								<input type="hidden" name="project_name" value="On-line школа йоги САДХАНА">
+								<input type="hidden" name="form_subject" value="Quiz">
+								<!-- // Hidden inputs -->
+
+								<!-- Quiz body -->
+								<div class="quiz__body">
+									<!-- Quiz steps -->
+									<div class="quiz__steps">
+
+										<!-- Step 1 -->
+										<div class="quiz__step js-quiz-step">
+
+
+											<div class="quiz__step--content">
+												<!-- Answers -->
+												<div class="quiz__step--answers-col">
+
+													<div class="quiz__progress">
+														<span class="quiz__progress--line js-quiz-progress-line" style="width: 20%"></span>
+														<span class="quiz__progress--counter">1 из 5</span>
+													</div>
+
+
+
+													<h3 class="quiz__step--question">Выберете главную цель<br>для вашей практики</h3>
+
+													<input type="hidden" name="Вопрос 1" value="Выберете главную цель для вашей практики">
+
+													<h2 class="quiz__step--question-title">я хочу заниматься йогой чтобы:</h2>
+
+													<div class="quiz__answers js-quiz-answers-first">
+
+														<!-- Quiz answer -->
+														<div class="quiz__answer--wrapper-block">
+															<label class="quiz__answer--wrapper">
+																<input type="radio" name="Цель практики" value="Мое тело стало красивым и здоровым" data-quiz-answer-id="1">
+																<span class="quiz__answer quiz__answer--radio"><span>Мое тело стало красивым и здоровым</span></span>
+															</label>
+														</div>
+														<!-- //Quiz answer -->
+
+														<!-- Quiz answer -->
+														<div class="quiz__answer--wrapper-block">
+															<label class="quiz__answer--wrapper">
+																<input type="radio" name="Цель практики" value="Избавиться от недостатка жизненной силы и пополнить энергию" data-quiz-answer-id="2">
+																<span class="quiz__answer quiz__answer--radio"><span>Избавиться от недостатка жизненной силы и пополнить энергию</span></span>
+															</label>
+														</div>
+														<!-- //Quiz answer -->
+
+														<!-- Quiz answer -->
+														<div class="quiz__answer--wrapper-block">
+															<label class="quiz__answer--wrapper">
+																<input type="radio" name="Цель практики" value="Наладить гармоничные отношения с людьми  и приобрести позитивное отношение к жизни" data-quiz-answer-id="3">
+																<span class="quiz__answer quiz__answer--radio"><span>Наладить гармоничные отношения с людьми  и приобрести позитивное отношение к жизни</span></span>
+															</label>
+														</div>
+														<!-- //Quiz answer -->
+
+														<!-- Quiz answer -->
+														<div class="quiz__answer--wrapper-block">
+															<label class="quiz__answer--wrapper">
+																<input type="radio" name="Цель практики" value="Освоить медитацию и философию древнего учения. Обрести духовный опыт" data-quiz-answer-id="4">
+																<span class="quiz__answer quiz__answer--radio"><span>Освоить медитацию и философию древнего учения. Обрести духовный опыт</span></span>
+															</label>
+														</div>
+														<!-- //Quiz answer -->
+
+														<!-- Quiz answer -->
+														<div class="quiz__answer--wrapper-block">
+															<label class="quiz__answer--wrapper">
+																<input type="radio" name="Цель практики" value="Обрести сексуальную энергию и  гармонию в отношениях с любимым человеком, родными и близкими" data-quiz-answer-id="5">
+																<span class="quiz__answer quiz__answer--radio"><span>Обрести сексуальную энергию и  гармонию в отношениях с любимым человеком, родными и близкими</span></span>
+															</label>
+														</div>
+														<!-- //Quiz answer -->
+
+														<!-- Quiz answer -->
+														<div class="quiz__answer--wrapper-block">
+															<label class="quiz__answer--wrapper">
+																<input type="radio" name="Цель практики" value="Избавиться от  проблемы со здоровьем, недомоганиями" data-quiz-answer-id="6">
+																<span class="quiz__answer quiz__answer--radio"><span>Избавиться от  проблемы со здоровьем, недомоганиями</span></span>
+															</label>
+														</div>
+														<!-- //Quiz answer -->
+
+														
+
+													</div>
+
+													<!-- Quiz next step button -->
+													<div class="quiz__controls text-left js-quiz-controls">
+														<button class="quiz__btn js-quiz-first-step-btn" type="button" data-quiz-direction="next"><span>Следующий шаг</span></button>
+													</div>
+												</div>
+												<!-- //Answers -->
+
+												<!-- Information -->
+												<div class="quiz__step--info-col">
+
+													<div class="quiz__step--info-content">
+
+														<div class="quiz__step--info-content_start">
+															<div class="quiz__step--info-content_start-block">
+																<img src="img/budda.jpg" alt="">
+																<p>Начните отвечать, чтобы система начала<br>подбор программы занятий йогой </p>
+															</div>
+														</div>
+
+														<div class="quiz__step--info-content_block bg">
+															<div class="quiz__step--info-content_text">
+																<p></p>
+															</div>
+														</div>
+													</div>
+
+													<div class="quiz__step--info-advantages">
+														<h6 class="quiz__step--info-advantages_title">По итогу теста Вы получите</h6>
+
+														<div class="row align-horisontal-center row-gutters">
+
+															<div class="quiz__step--info-advantage">
+																<span class="quiz__step--info-advantage_ic" style="background-image: url('img/icons/advantage-1.png');"></span>
+																<p>Подбор программы для занятий дома</p>
+															</div>
+
+															<div class="quiz__step--info-advantage">
+																<span class="quiz__step--info-advantage_ic" style="background-image: url('img/icons/advantage-2.png');"></span>
+																<p>Первый месяц занятий с наставником в  on-line школе йоги <b>в подарок</b></p>
+															</div>
+														</div>
+													</div>
+
+													<div class="quiz__step--info-img_decor">
+														<img src="img/quiz/decor/1.png" alt="">
+													</div>
+
+												</div>
+												<!-- //Information -->
+											</div>
+
+										</div>
+										<!-- //Step 1-->
+
+										<!-- Step 2 -->
+										<div class="quiz__step js-quiz-step">
+
+
+											<div class="quiz__step--content">
+												<!-- Answers -->
+												<div class="quiz__step--answers-col">
+
+													<div class="quiz__progress">
+														<span class="quiz__progress--line js-quiz-progress-line" style="width: 40%"></span>
+														<span class="quiz__progress--counter">2 из 5</span>
+													</div>
+
+													<input type="hidden" name="Вопрос 2" value="сколько вам лет?">
+
+													<h2 class="quiz__step--question-title">я хочу заниматься йогой чтобы:</h2>
+
+													<div class="quiz__answers js-quiz-answers-second">
+
+														<!-- Quiz answer -->
+														<div class="quiz__answer--wrapper-block">
+															<label class="quiz__answer--wrapper">
+																<input type="radio" name="Возраст" value="До 35 лет" data-quiz-answer-id="1">
+																<span class="quiz__answer quiz__answer--radio"><span>До 35 лет</span></span>
+															</label>
+														</div>
+														<!-- //Quiz answer -->
+
+														<!-- Quiz answer -->
+														<div class="quiz__answer--wrapper-block">
+															<label class="quiz__answer--wrapper">
+																<input type="radio" name="Возраст" value="36-55 лет" data-quiz-answer-id="2">
+																<span class="quiz__answer quiz__answer--radio"><span>36-55 лет</span></span>
+															</label>
+														</div>
+														<!-- //Quiz answer -->
+
+														<!-- Quiz answer -->
+														<div class="quiz__answer--wrapper-block">
+															<label class="quiz__answer--wrapper">
+																<input type="radio" name="Возраст" value="Более 55 лет" data-quiz-answer-id="3">
+																<span class="quiz__answer quiz__answer--radio"><span>Более 55 лет</span></span>
+															</label>
+														</div>
+														<!-- //Quiz answer -->
+
+														
+													</div>
+
+													<!-- Quiz next step button -->
+													<div class="quiz__controls text-left js-quiz-controls">
+														<button class="quiz__btn js-quiz-first-step-btn" type="button" data-quiz-direction="next"><span>Следующий шаг</span></button>
+													</div>
+												</div>
+												<!-- //Answers -->
+
+												<!-- Information -->
+												<div class="quiz__step--info-col">
+													<div class="quiz__step--info-content">
+
+														<div class="quiz__step--info-content_start">
+															<div class="quiz__step--info-content_start-block">
+																<img src="img/budda.jpg" alt="">
+																<p>Начните отвечать, чтобы система начала<br>подбор программы занятий йогой </p>
+															</div>
+														</div>
+
+														<div class="quiz__step--info-content_block bg">
+															<div class="quiz__step--info-content_text">
+																<p></p>
+															</div>
+														</div>
+													</div>
+
+													<div class="quiz__step--info-advantages">
+														<h6 class="quiz__step--info-advantages_title">По итогу теста Вы получите</h6>
+
+														<div class="row align-horisontal-center row-gutters">
+
+															<div class="quiz__step--info-advantage">
+																<span class="quiz__step--info-advantage_ic" style="background-image: url('img/icons/advantage-1.png');"></span>
+																<p>Подбор программы для занятий дома</p>
+															</div>
+
+															<div class="quiz__step--info-advantage">
+																<span class="quiz__step--info-advantage_ic" style="background-image: url('img/icons/advantage-2.png');"></span>
+																<p>Первый месяц занятий с наставником в  on-line школе йоги <b>в подарок</b></p>
+															</div>
+														</div>
+													</div>
+
+													<div class="quiz__step--info-img_decor">
+														<img src="img/quiz/decor/2.png" alt="">
+													</div>
+
+												</div>
+												<!-- //Information -->
+											</div>
+
+										</div>
+										<!-- //Step 2-->
+
+										<!-- Step 3 -->
+										<div class="quiz__step js-quiz-step">
+
+
+											<div class="quiz__step--content">
+												<!-- Answers -->
+												<div class="quiz__step--answers-col">
+
+													<div class="quiz__progress">
+														<span class="quiz__progress--line js-quiz-progress-line" style="width: 60%"></span>
+														<span class="quiz__progress--counter quiz__progress--counter-light">3 из 5</span>
+													</div>
+
+													<input type="hidden" name="Вопрос 3" value="Вы занимались йогой раньше ?">
+
+													<h2 class="quiz__step--question-title">Вы занимались йогой раньше ?</h2>
+
+													<div class="quiz__answers">
+
+														<!-- Quiz answer -->
+														<div class="quiz__answer--wrapper-block">
+															<label class="quiz__answer--wrapper">
+																<input type="radio" name="Занятие йогой раньше" value="Нет. Никогда не пробовал(а)">
+																<span class="quiz__answer quiz__answer--radio"><span>Нет. Никогда не пробовал(а)</span></span>
+															</label>
+														</div>
+														<!-- //Quiz answer -->
+
+														<!-- Quiz answer -->
+														<div class="quiz__answer--wrapper-block">
+															<label class="quiz__answer--wrapper">
+																<input type="radio" name="Занятие йогой раньше" value="Есть небольшой опыт. Менее 1 года">
+																<span class="quiz__answer quiz__answer--radio"><span>Есть небольшой опыт. Менее 1 года</span></span>
+															</label>
+														</div>
+														<!-- //Quiz answer -->
+
+														<!-- Quiz answer -->
+														<div class="quiz__answer--wrapper-block">
+															<label class="quiz__answer--wrapper">
+																<input type="radio" name="Занятие йогой раньше" value="Занимаюсь  практикой. Опыт 1-3 года">
+																<span class="quiz__answer quiz__answer--radio"><span>Занимаюсь  практикой. Опыт 1-3 года</span></span>
+															</label>
+														</div>
+														<!-- //Quiz answer -->
+
+														<!-- Quiz answer -->
+														<div class="quiz__answer--wrapper-block">
+															<label class="quiz__answer--wrapper">
+																<input type="radio" name="Занятие йогой раньше" value="Постоянно практикуюсь. Опыт более 3-х лет">
+																<span class="quiz__answer quiz__answer--radio"><span>Постоянно практикуюсь. Опыт более 3-х лет</span></span>
+															</label>
+														</div>
+														<!-- //Quiz answer -->
+
+														
+													</div>
+
+													<!-- Quiz next step button -->
+													<div class="quiz__controls text-left js-quiz-controls">
+														<button class="quiz__btn js-quiz-first-step-btn" type="button" data-quiz-direction="next"><span>Следующий шаг</span></button>
+													</div>
+												</div>
+												<!-- //Answers -->
+
+												<!-- Information -->
+												<div class="quiz__step--info-col">
+													<div class="quiz__step--info-content">
+
+														<div class="quiz__step--info-content_start">
+															<div class="quiz__step--info-content_start-block">
+																<img src="img/budda.jpg" alt="">
+																<p>Начните отвечать, чтобы система начала<br>подбор программы занятий йогой </p>
+															</div>
+														</div>
+
+														<div class="quiz__step--info-content_block bg">
+															<div class="quiz__step--info-content_text">
+																<p></p>
+															</div>
+														</div>
+													</div>
+													
+													<div class="quiz__step--info-advantages">
+														<h6 class="quiz__step--info-advantages_title">По итогу теста Вы получите</h6>
+
+														<div class="row align-horisontal-center row-gutters">
+
+															<div class="quiz__step--info-advantage">
+																<span class="quiz__step--info-advantage_ic" style="background-image: url('img/icons/advantage-1.png');"></span>
+																<p>Подбор программы для занятий дома</p>
+															</div>
+
+															<div class="quiz__step--info-advantage">
+																<span class="quiz__step--info-advantage_ic" style="background-image: url('img/icons/advantage-2.png');"></span>
+																<p>Первый месяц занятий с наставником в  on-line школе йоги <b>в подарок</b></p>
+															</div>
+														</div>
+													</div>
+
+													<div class="quiz__step--info-img_decor">
+														<img src="img/quiz/decor/3.png" alt="">
+													</div>
+
+												</div>
+												<!-- //Information -->
+											</div>
+
+										</div>
+										<!-- //Step 3-->
+
+										<!-- Step 4 -->
+										<div class="quiz__step js-quiz-step">
+
+
+											<div class="quiz__step--content">
+												<!-- Answers -->
+												<div class="quiz__step--answers-col">
+
+													<div class="quiz__progress">
+														<span class="quiz__progress--line js-quiz-progress-line" style="width: 80%"></span>
+														<span class="quiz__progress--counter quiz__progress--counter-light">4 из 5</span>
+													</div>
+
+													<input type="hidden" name="Вопрос 4" value="от каких заболеваний/недомоганий вы хотите избавиться практикуя ЙОГу?">
+
+													<h2 class="quiz__step--question-title">От каких заболеваний/недомоганий вы хотите избавиться практикуя ЙОГу?</h2>
+
+													<div class="quiz__answers">
+
+														<!-- Quiz answer -->
+														<div class="quiz__answer--wrapper-block">
+															<label class="quiz__answer--wrapper">
+																<input type="radio" name="Проблемы со здоровьем" value="Нет. Я полностью здоров">
+																<span class="quiz__answer quiz__answer--radio"><span>Нет. Я полностью здоров</span></span>
+															</label>
+														</div>
+														<!-- //Quiz answer -->
+
+														<!-- Quiz answer -->
+														<div class="quiz__answer--wrapper-block row align-horisontal-start align-vertical-start">
+															<label class="quiz__answer--wrapper">
+																<input type="radio" name="Проблемы со здоровьем" value="Своя причина">
+																<span class="quiz__answer quiz__answer--radio quiz__answer--radio-transparent"><span></span></span>
+															</label>
+															<span class="quiz__textarea--wrapper">
+																<textarea name="Проблемы со здоровьем" class="quiz__textarea js-quiz-textarea"></textarea>
+															</span>	
+														</div>
+														<!-- //Quiz answer -->
+
+
+
+														
+													</div>
+
+													<!-- Quiz next step button -->
+													<div class="quiz__controls text-left js-quiz-controls">
+														<button class="quiz__btn js-quiz-first-step-btn" type="button" data-quiz-direction="next"><span>Следующий шаг</span></button>
+													</div>
+												</div>
+												<!-- //Answers -->
+
+												<!-- Information -->
+												<div class="quiz__step--info-col">
+													<div class="quiz__step--info-img bg" style="background-image: url('img/quiz/question-2/1.png');"></div>
+													<div class="quiz__step--info-advantages">
+														<h6 class="quiz__step--info-advantages_title">По итогу теста Вы получите</h6>
+
+														<div class="row align-horisontal-center row-gutters">
+
+															<div class="quiz__step--info-advantage">
+																<span class="quiz__step--info-advantage_ic" style="background-image: url('img/icons/advantage-1.png');"></span>
+																<p>Подбор программы для занятий дома</p>
+															</div>
+
+															<div class="quiz__step--info-advantage">
+																<span class="quiz__step--info-advantage_ic" style="background-image: url('img/icons/advantage-2.png');"></span>
+																<p>Первый месяц занятий с наставником в  on-line школе йоги <b>в подарок</b></p>
+															</div>
+														</div>
+													</div>
+
+													<div class="quiz__step--info-img_decor">
+														<img src="img/quiz/decor/4.png" alt="">
+													</div>
+
+												</div>
+												<!-- //Information -->
+											</div>
+
+										</div>
+										<!-- //Step 4-->
+
+
+									</div>
+									<!-- //Quiz steps -->
+
+								</div>
+								<!-- //Quiz body -->
+
+								
+							</form>
+
+						</div>
+						<!-- //QUIZ -->
+
+					</div>
+					<!-- //Quiz wrapper-->
+				</div>
+			</section>
+			<!-- //Quiz -->
+		</main>
+		<!-- //Main -->
+
+		<!-- Footer -->
+		{% include '../parts/footer.html' %}
+		<!-- //Footer -->
+
+	</div>
+	<!-- //CONTENT WRAPPER -->
+
+	{% include '../parts/scripts.html' %}
+
+</body>
+
+</html>
