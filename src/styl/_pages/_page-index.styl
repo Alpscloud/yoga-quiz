@@ -1,0 +1,113 @@
+// Promo
+.promo
+	&__block
+		position relative
+		padding-top 110px
+		padding-bottom 435px
+		&--content
+			max-width 730px
+			position relative
+			z-index 2
+			
+	&__title
+		color $primary-color
+		position relative
+		padding-bottom 35px
+		margin-bottom 35px
+		text-transform uppercase
+		font 2.5em $ABold
+		&:before
+			pseudo()
+			position absolute
+			left 0
+			bottom 0
+			width 160px
+			height 8px
+			background-color $accent-color
+			
+	&__subtitle
+		font 1.5em $ABold
+		margin-bottom 35px
+		
+	&__text
+		font-size 1.5em
+		margin-bottom 80px
+		
+	&__btn
+		&--block
+			max-width 550px
+		&--text
+			margin-top 15px
+			
+	&__img
+		position absolute
+		right -230px
+		top -18px
+		img
+			display block
+			
+
+.author
+	&__name
+		font-family $ABold
+	&__position
+		font-family $Italic
+		
+
+// Sect gift
+.sect__gift
+	background-color $accent-color
+.gift
+	text-transform uppercase
+	display block
+	position absolute
+	right 0
+	bottom 100%
+	transform translate(40px, 43px)
+	letter-spacing 13px
+	color $accent-color
+	font 131px $ABold
+	
+	&__block
+		position relative
+		padding 30px 0 90px
+		max-width 840px
+		z-index 3
+	&__decor
+		position absolute
+		left -75px
+		top -335px
+		z-index 2
+		opacity .26
+		img
+			display block
+			
+	&__row
+		position relative	
+	&__img
+		flex none
+		margin-right 20px
+		width 190px
+		img
+			display block
+			max-width 190px
+			
+	&__text
+		font 1.2em $Italic
+		position relative
+		
+		b
+			display inline-block
+			position relative
+			&:after
+				pseudo()
+				position absolute
+				right -45px
+				top 20px
+				width 37px
+				height 89px
+				background url('../img/arrow.png') 50% 50% no-repeat / 37px 89px
+				
+	&__btn--block
+		padding-left 210px
+		margin-top 20px

@@ -1,2 +1,45 @@
 .footer
 	background-color $footer-bg
+	&__top
+		padding 35px 0
+		
+	&__text
+		a
+			color inherit
+			
+			&:hover
+				color $accent-color
+				
+
+	&__contacts
+		a
+			white-space nowrap
+		&--phones-link
+			position relative
+			display inline-block
+			color $text-color
+			font-family $ABold
+			&:hover
+				color $accent-color
+			&_messangers
+				&:before
+					pseudo()
+					position absolute
+					right 100%
+					vertical-center()
+					width 58px
+					height 25px
+					background url('../img/icons/messangers.png') 50% 50% no-repeat / 58px 25px
+					margin-right 5px
+				
+	&__bottom
+		background-color $footer-primary-bg
+		padding 25px 0
+		
+
+.developer
+	color $light-color
+	a
+		color inherit
+		&:hover
+			color $accent-color
