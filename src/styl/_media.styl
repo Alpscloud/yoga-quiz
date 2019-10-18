@@ -9,6 +9,12 @@
 +min-screen-height(minHeight)
 */
 
++max-screen(1200px)
+	// Popop
+	.popup
+		&__body
+			padding 40px 70px
+
 +max-screen(1100px)
 	body
 		font-size 16px
@@ -24,6 +30,14 @@
 		&__img
 			right -350px
 			
+	// Quiz
+	.quiz__final--text
+		display none
+	
+
+	.highlighted
+		&:before
+			height 20px
 +max-screen(1000px)
 	.logo
 		flex-direction column
@@ -72,6 +86,51 @@
 			.col
 				&:first-child
 					display none
+					
+	// Quiz
+	.quiz__step
+		&--content
+			flex-direction column
+		&--answers-col
+			width 100%
+			padding-right 0
+			margin-bottom 40px
+			
+		&--info-content_start 
+			p
+				&:before
+					display none
+			
+	.quiz
+		&__answer
+			&:before
+				top -0.5px
+			&:after
+				top 3.5px
+				
+		&__final--img
+			right -230px
+			
+		&__success--img
+			right -100px
+			top -50px
+			
+
+	// Popop
+	.popup
+		&__body
+			padding 30px 50px
+			
+		&__title
+			margin-bottom 20px
+
+				
++max-screen(900px)
+	// Quiz
+	.quiz
+		&__step
+			&--info-col
+				width 100%
 		
 +max-screen(767px)
 	// Gift
@@ -81,6 +140,28 @@
 		letter-spacing 10px
 		&__decor
 			display none
+			
+	// Quiz
+	.quiz__final
+		&--methods
+			p
+				font-size 16px
+		&--content-block
+			max-width 100%
+		&--title-block
+			
+			padding-left 60px
+			&:before
+				top -7px
+				background-size contain
+				width 54px
+				height 60px
+		&--img
+			display none
+			
+	.quiz__contacts
+		margin-top 80px
+		
 			
 +max-screen(700px)
 			
@@ -127,6 +208,19 @@
 		left 50%
 		transform translate(-50%, 22px)
 		font-size 70px
+		
+
+	// Quiz
+	.quiz__final--title-block
+		margin-bottom 30px
+		
+	.quiz__body
+		padding-top 20px
+		
+	// popup
+	.popup__body
+		padding 30px 20px
+		
 +max-screen(600px)
 	.btn
 		&__content
@@ -150,6 +244,109 @@
 			margin-bottom 20px
 			&:last-child
 				margin-bottom 0
+				
+	// Quiz
+	.quiz__step
+		&--info
+			&-advantage
+				padding 15px 7.5px 0
+				&_ic
+					width 70px
+					height 70px
+					background-size auto
+					margin-bottom 10px
+			
+			&-advantages 
+				.row
+					margin-left -7.5px
+					margin-right -7.5px
+					
+			&-col_row 
+				.row
+					flex-wrap wrap
+				.content__img
+					width 100%
+					padding-top 100%
+					
+			&-content
+				&_block
+					padding 25px
+				&_text
+					font-size 11px
+		
+		&--question
+			font-size 1.25em
+			padding-bottom 20px
+			&-title
+				font-size 1.6em
+				
+	.quiz
+		&__final--subtitle
+			font-size 1.25em
+			margin-top 20px
+		&__success
+			padding-bottom 80px
+		&__contacts
+			.row
+				flex-wrap wrap
+			.col__2
+				width 100%
+				margin-bottom 30px
+				&:last-child
+					margin-bottom 0
+				
+
+	.master
+		&__content
+			max-width 100%
+		&__block 
+			.master__info
+				position relative
+				right auto
+				top auto
+				transform none
+				margin 20px auto 0 auto
+				
+	.socials__link
+		width 40px
+		height 40px
+		background-size 40px 40px
+		
+
+	.popup__content--block
+		padding 15px
+		&:first-child
+			> .row
+					flex-wrap wrap
+					padding 30px 15px
+				
+			.content
+				width 100%
+				padding 0
+				margin-bottom 30px
+				
+			.master__info
+				margin 0 auto
+				width 100%
+				img
+					max-width 100%
+			
+
+	.popup
+		.content
+			padding 0
+		.btn__close
+			top 7px
+			right 7px
+			width 15px
+			height 15px
+			background-size 15px 15px
+			
+	.master__duty 
+		ol 
+			li
+				width 100%
+
 
 +max-screen(550px)
 	//Gift
@@ -176,6 +373,9 @@
 			flex-direction column
 			align-items center
 			
+	.btn__content
+		font-size 19px
+			
 	.logo
 		margin-bottom 20px
 		
@@ -194,3 +394,52 @@
 		left 50%
 		transform translate(-50%,14px)
 		margin-left 5px
+		
+	// Quiz
+	.quiz
+		&__methods--row
+			padding-left 0
+			padding-right 0
+			margin-left 0
+			margin-right 0
+			justify-content space-between
+		
+		&__final
+			&--title
+				font-size 1.4em
+			&--inputs
+				padding-left 0
+				padding-right 0
+				
+			&--methods
+				padding 20px
+		&__method
+			&--label
+				padding 0
+				width 50px
+			&--ic
+				width 50px
+				height 50px
+				background-size 35px 35px
+		
+		&__input
+			padding-left 18px
+			padding-right 18px	
+			&::-webkit-input-placeholder
+				font-size 18px
+			&::-moz-placeholder
+				font-size 18px
+			&:-moz-placeholder
+				font-size 18px			
+			&:-ms-input-placeholder
+				font-size 18px
+				
+	.btn__submit 
+		.btn__content
+			padding-left 60px
+			font-size 18px
+			background-size 35px 50px
+			background-position left 10px center
++max-screen(400px)
+	.quiz__btn
+		width 100%

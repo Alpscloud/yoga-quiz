@@ -20,6 +20,7 @@
 		background-color rgba($popup-overlay-bg, $popup-overlay-opacity)
 		padding 10px
 		text-align center
+		white-space nowrap
 		&:before
 			pseudo()
 			vertical-align middle
@@ -34,6 +35,7 @@
 		vertical-align middle
 		position relative
 		border-radius 6px
+		white-space normal
 	
 	&__title
 		color $primary-color
@@ -110,14 +112,17 @@
 	display inline-block
 	background-color $primary-color
 	color $light-color
-	outline 2px solid $primary-color
 	position relative
+	span
+		position relative
+		z-index 1
 	&:before
 		pseudo()
 		height 26px
-		width 100%
+		width 200%
 		position absolute
 		vertical-center()
-		right 100%
+		right -5px
 		background-color $primary-color
+
 				

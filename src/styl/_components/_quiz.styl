@@ -15,24 +15,22 @@ $quiz-progress-border-color = #6f4170
 
 
 
-.sect__quiz
-	padding 50px 0 
-	
+
 
 .quiz
 	
-	
-	
+
 	&__header
 		margin-bottom 30px
 		&--row
 			position relative
 			
 	&__body
+		padding 50px 0
 		min-height 740px
 		border-bottom 2px solid $primary-color
 		
-		// display none
+		
 
 	&__progress
 		margin-bottom 20px
@@ -441,6 +439,8 @@ $quiz-progress-border-color = #6f4170
 			margin-bottom 15px
 	&__final
 		padding-bottom 270px
+		padding-top 50px
+		
 		&--wrapper
 			position relative
 			background linear-gradient(to bottom, $quiz-primary-color 0%, $quiz-primary-color 100%) no-repeat
@@ -449,6 +449,7 @@ $quiz-progress-border-color = #6f4170
 			min-height 670px
 			// padding-bottom 270px
 			display none
+			
 			
 		&--text
 			position absolute
@@ -484,7 +485,14 @@ $quiz-progress-border-color = #6f4170
 				margin-top 30px
 				margin-bottom 15px
 				padding-left 80px
-				background url('../img/icons/complete.png') left top 10px no-repeat
+				&:before
+					pseudo()
+					position absolute
+					left 0
+					top 10px
+					background url('../img/icons/complete.png') center center no-repeat / 64px 70px
+					width 64px
+					height 70px
 			
 		&--subtitle
 			font 1.5em $ABold	
@@ -523,6 +531,7 @@ $quiz-progress-border-color = #6f4170
 	&__success
 		display none
 		padding-bottom 110px
+		padding-top 50px
 		&--img
 			top 20px
 			right -45px
