@@ -125,7 +125,7 @@
 													<div class="quiz__step--info-content">
 
 														<div class="quiz__step--info-content_start">
-															<div class="quiz__step--info-content_start-block">
+															<div class="quiz__step--info-content_start-block text-center">
 																<img src="img/budda.jpg" alt="">
 																<p>Начните отвечать, чтобы система начала<br>подбор программы занятий йогой </p>
 															</div>
@@ -402,7 +402,7 @@
 														<!-- Quiz answer -->
 														<div class="quiz__answer--wrapper-block">
 															<label class="quiz__answer--wrapper">
-																<input type="radio" name="Проблемы со здоровьем" value="Нет. Я полностью здоров">
+																<input type="radio" name="Проблемы со здоровьем" value="Я здоров">
 																<span class="quiz__answer quiz__answer--radio"><span>Нет. Я полностью здоров</span></span>
 															</label>
 														</div>
@@ -415,7 +415,7 @@
 																<span class="quiz__answer quiz__answer--radio quiz__answer--radio-transparent"><span></span></span>
 															</label>
 															<span class="quiz__textarea--wrapper">
-																<textarea name="Проблемы со здоровьем" class="quiz__textarea js-quiz-textarea" placeholder="Напишите ваши травмы и заболевания от которых вы хотите избавиться. А также особые условия, например послеродовой период."></textarea>
+																<textarea name="Проблемы со здоровьем (текст)" class="quiz__textarea js-quiz-textarea" placeholder="Напишите ваши травмы и заболевания от которых вы хотите избавиться. А также особые условия, например послеродовой период."></textarea>
 															</span>	
 														</div>
 														<!-- //Quiz answer -->
@@ -485,85 +485,162 @@
 							</div>
 							<!-- // Quiz body-->
 
-							<!-- Quiz final -->
-							<div class="quiz__final js-quiz-final">
-								<div class="container">
+							<!-- Quiz final wrapper-->
+							<div class="quiz__final--wrapper js-quiz-result">
+								<!-- Final -->
+								<div class="quiz__final js-quiz-final">
+									<div class="container">
 
-									<div class="quiz__final--content">
-										<div class="quiz__final--content-block">
-											<div class="quiz__progress">
-												<span class="quiz__progress--line js-quiz-progress-line" style="width: 97%"></span>
-												<span class="quiz__progress--counter quiz__progress--counter-light">5 из 5</span>
-											</div>
-
-											<div class="quiz__final--title-block">
-												<h2 class="quiz__final--title">Ваша программа сформирована</h2>
-
-												<p class="quiz__final--text">Программа по Вашим параметрам сформирована</p>
-											</div>
-
-											<div class="quiz__final--methods">
-												<p>Куда Вам удобно получить программу занятий йогой и ссылку на видео запись первого урока?</p>
-
-												<div class="row row-nowrap align-horisontal-center quiz__methods--row">
-													<label class="quiz__method--label">
-														<span class="quiz__method--ic quiz__method--ic-whatsapp" style="background-image: url('img/icons/svg/whatsapp.svg');"></span>
-														<input type="radio" name="Способ связи" value="whatsapp" data-quiz-method="messanger">
-														<span class="quiz__method"></span>
-													</label>
-
-													<label class="quiz__method--label">
-														<span class="quiz__method--ic quiz__method--ic-viber" style="background-image: url('img/icons/svg/viber.svg');"></span>
-														<input type="radio" name="Способ связи" value="viber" data-quiz-method="messanger">
-														<span class="quiz__method"></span>
-													</label>
-
-													<label class="quiz__method--label">
-														<span class="quiz__method--ic quiz__method--ic-telegram" style="background-image: url('img/icons/svg/telegram.svg');"></span>
-														<input type="radio" name="Способ связи" value="telegram" data-quiz-method="messanger">
-														<span class="quiz__method"></span>
-													</label>
-
-													<label class="quiz__method--label">
-														<span class="quiz__method--ic quiz__method--ic-email" style="background-image: url('img/icons/svg/email.svg');"></span>
-														<input type="radio" name="Способ связи" value="email" data-quiz-method="email">
-														<span class="quiz__method"></span>
-													</label>
+										<div class="quiz__final--content">
+											<div class="quiz__final--content-block">
+												<div class="quiz__progress">
+													<span class="quiz__progress--line js-quiz-progress-line" style="width: 97%"></span>
+													<span class="quiz__progress--counter quiz__progress--counter-light">5 из 5</span>
 												</div>
 
-												<div class="quiz__final--inputs">
-													<div class="quiz__input--wrapper">
-														<input type="text" name="Номер" class="quiz__input js-input js-input-phone" placeholder="_ (___) ___-__-__">
-													</div>
-													<div class="quiz__input--wrapper">
-														<button class="btn__wide btn__submit btn__accent">
-															<span class="btn__content">Получить программу занятий и видео запись первого урока</span>
-														</button>
-													</div>
+												<div class="quiz__final--title-block">
+													<h2 class="quiz__final--title">Ваша программа сформирована</h2>
 
-													<div class="quiz__input--wrapper">
-														<label class="quiz__checkbox--label">
-															<input type="checkbox" name="Согласие на обработку персональных данных" checked>
-															<span class="quiz__checkbox">Даю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</span>
+													<p class="quiz__final--text">Программа по Вашим параметрам сформирована</p>
+												</div>
+
+												<div class="quiz__final--methods">
+													<p>Куда Вам удобно получить программу занятий йогой и ссылку на видео запись первого урока?</p>
+
+													<div class="row row-nowrap align-horisontal-center quiz__methods--row">
+														<label class="quiz__method--label">
+															<span class="quiz__method--ic quiz__method--ic-whatsapp" style="background-image: url('img/icons/svg/whatsapp.svg');"></span>
+															<input type="radio" name="Способ связи" value="whatsapp" data-quiz-method="messanger">
+															<span class="quiz__method"></span>
+														</label>
+
+														<label class="quiz__method--label">
+															<span class="quiz__method--ic quiz__method--ic-viber" style="background-image: url('img/icons/svg/viber.svg');"></span>
+															<input type="radio" name="Способ связи" value="viber" data-quiz-method="messanger">
+															<span class="quiz__method"></span>
+														</label>
+
+														<label class="quiz__method--label">
+															<span class="quiz__method--ic quiz__method--ic-telegram" style="background-image: url('img/icons/svg/telegram.svg');"></span>
+															<input type="radio" name="Способ связи" value="telegram" data-quiz-method="messanger">
+															<span class="quiz__method"></span>
+														</label>
+
+														<label class="quiz__method--label">
+															<span class="quiz__method--ic quiz__method--ic-email" style="background-image: url('img/icons/svg/email.svg');"></span>
+															<input type="radio" name="Способ связи" value="email" data-quiz-method="email">
+															<span class="quiz__method"></span>
 														</label>
 													</div>
+
+													<div class="quiz__final--inputs js-quiz-inputs-socials">
+														<div class="quiz__input--wrapper">
+															<input type="text" name="Номер" class="quiz__input js-input-phone" placeholder="_ (___) ___-__-__">
+														</div>
+														<div class="quiz__input--wrapper">
+															<button class="btn__wide btn__submit btn__accent" type="submit">
+																<span class="btn__content">Получить программу занятий и видео запись первого урока</span>
+															</button>
+														</div>
+
+														<div class="quiz__input--wrapper">
+															<label class="quiz__checkbox--label">
+																<input type="checkbox" name="Согласие на обработку персональных данных" checked>
+																<span class="quiz__checkbox">Даю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</span>
+															</label>
+														</div>
+													</div>
+
+													<div class="quiz__final--inputs js-quiz-inputs-email">
+														<div class="quiz__input--wrapper">
+															<input type="email" name="Email" class="quiz__input" placeholder="Введите Вашу почту">
+														</div>
+														<div class="quiz__input--wrapper">
+															<p class="quiz__input--label">За Вашим номером будет забронирован подарочный месяц занятий с наставником</p>
+															<input type="text" name="Телефон" class="quiz__input js-input-phone" placeholder="Введите Ваш телефон">
+														</div>
+														<div class="quiz__input--wrapper">
+															<button class="btn__wide btn__submit btn__accent" type="submit">
+																<span class="btn__content">Получить программу занятий и видео запись первого урока</span>
+															</button>
+														</div>
+
+														<div class="quiz__input--wrapper">
+															<label class="quiz__checkbox--label">
+																<input type="checkbox" name="Согласие на обработку персональных данных" checked>
+																<span class="quiz__checkbox">Даю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</span>
+															</label>
+														</div>
+													</div>
+
+													<div class="quiz__final--methods-img">
+														<img src="img/budda-accent.png" alt="">
+													</div>
+												</div>
+											</div>
+
+											<div class="quiz__final--img">
+												<img src="img/final-img-1.png" alt="">
+												<h3 class="author__name">Добровольский Владислав</h3>
+												<p class="author__position">наставник on-line школы йоги<br>Садхана</p>
+											</div>
+
+										</div>
+
+
+									</div>
+									<!-- //container -->
+								</div>
+								<!-- //Final -->
+
+								<!-- Success -->
+								<div class="quiz__success js-quiz-success">
+									<div class="container">
+
+										<div class="quiz__final--content">
+
+
+											<div class="quiz__final--content-block quiz__final--content-block-wide">
+												<div class="quiz__progress">
+													<span class="quiz__progress--line js-quiz-progress-line" style="width: 97%"></span>
+													<span class="quiz__progress--counter quiz__progress--counter-light">5 из 5</span>
+												</div>
+												<div class="quiz__final--title-block">
+													<h2 class="quiz__final--title">Система сформировала<br>результат Вашей программы<br>занятий йогой!</h2>
+													<p class="quiz__final--subtitle">В ближайшее время мы отправим<br>программу занятий и первый урок<br>на указанный вами адрес.</p>
+
+												</div>
+											</div>
+
+											<div class="quiz__final--img quiz__success--img">
+												<img src="img/god.png" alt="">
+											</div>
+
+										</div>
+
+										<div class="quiz__contacts  text-left">
+											<div class="row row-gutters row-nowrap align-horisontal-between">
+												<div class="col__2">
+													<p>Переходите на наш сайт и узнайте подробнее о школе</p>
+													<a href="https://sadhana-yoga.online/" target="_blank">https://sadhana-yoga.online/</a>
+												</div>
+												<div class="col__2">
+													<p>Подписыватесь на наши соц. сети, чтобы быть в курсе последних новостей</p>
+
+													<ul class="socials">
+														<li class="socials__item"><a href="#" target="_blank" class="socials__link" style="background-image: url('img/icons/svg/socials/instagram.svg');"></a></li>
+														<li class="socials__item"><a href="#" target="_blank" class="socials__link" style="background-image: url('img/icons/svg/socials/facebook.svg');"></a></li>
+														<li class="socials__item"><a href="#" target="_blank" class="socials__link" style="background-image: url('img/icons/svg/socials/vk.svg');"></a></li>
+													</ul>
 												</div>
 											</div>
 										</div>
-
-										<div class="quiz__final--img">
-											<img src="img/final-img-1.png" alt="">
-											<h3 class="author__name">Добровольский Владислав</h3>
-											<p class="author__position">наставник on-line школы йоги<br>Садхана</p>
-										</div>
-
 									</div>
-									
-
+									<!-- //container -->
 								</div>
-								<!-- //container -->
+								<!-- //Success -->
 							</div>
-							<!-- //Quiz final -->
+							<!-- //Quiz final wrapper-->
 
 						</form>
 					</div>

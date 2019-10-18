@@ -115,13 +115,51 @@ $(document).ready(function() {
 	quizStep.not(":nth-child(1)").hide();
 	quizStep.first().addClass('is-active');
 
+	quizStep.last().find('.js-quiz-controls').on('click', function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+
+		var btn = $(e.target);
+
+		if(btn.prop('tagName') !== 'BUTTON') {return};
+
+		$('.js-quiz-body').hide();
+		$('.js-quiz-result').fadeIn();
+	});
+
 
 
 	$('.quiz__methods--row input[type=radio]').on('change', function() {
 		var method = $(this).attr('data-quiz-method');
 
+		$('.quiz__input').removeClass('is-error');
+
 		if(method === 'messanger') {
-			$('.quiz__final--inputs').stop().slideDown(200);
+
+			$('.js-quiz-inputs-email').find('.quiz__input').each(function() {
+				$(this).removeClass('js-input');
+			});
+
+			$('.js-quiz-inputs-email').hide();
+
+			$('.js-quiz-inputs-socials').find('.quiz__input').each(function() {
+				$(this).addClass('js-input');
+			});
+
+			$('.js-quiz-inputs-socials').stop().slideDown(200);
+
+		} else if(method === 'email') {
+			$('.js-quiz-inputs-socials').find('.quiz__input').each(function() {
+				$(this).removeClass('js-input');
+			});
+
+			$('.js-quiz-inputs-socials').hide();
+			
+			$('.js-quiz-inputs-email').find('.quiz__input').each(function() {
+				$(this).addClass('js-input');
+			});
+
+			$('.js-quiz-inputs-email').stop().slideDown(200);
 		}
 	});
 	// =========== Show next / prev quiz step
@@ -158,11 +196,27 @@ $(document).ready(function() {
 	
 	
 // ========= Ajax form ===========
+$('.js-input').on('focus',function() {
+	if($(this).hasClass('is-error')) {
+		$(this).removeClass('is-error');
+	}
+});
+
 $('.js-form').submit(function(e) {
 	e.preventDefault();
 
-	var self = $(this);
+	var self = $(this),
+		inputs = self.find('.js-input'),
+		flag = true;
 
+	$(inputs).each(function() {
+		if(!$(this).val() || $(this).val() == "") {
+			$(this).addClass('is-error');
+			flag = false;
+		}
+	});
+
+	if(!flag) {return false;}
 	
 
 	$.ajax({
@@ -172,12 +226,16 @@ $('.js-form').submit(function(e) {
 	}).done(function() {
 		self.trigger("reset");
 
-		self.parents('.quiz__wrapper').hide();
+		self.find('.js-quiz-final').hide();
+		self.find('.js-quiz-success').fadeIn();
 
-		self.parents('.quiz__wrapper').next('.quiz__result--wrapper').fadeIn();
 	});
 
 });
+// ========= =========== =========== ===========
+
+// ========= In p u t   t e l e p h o n e   m a s k ===========
+$('.js-input-phone').mask('+7 (999) 999-99-99');
 // ========= =========== =========== ===========
 
 
