@@ -26,15 +26,98 @@
 			width 0
 			height 100%
 	&__body
-		max-width 400px
+		width 100%
+		max-width 1170px
 		background-color $popup-body-bg
-		padding 20px
+		padding 70px 115px
 		display inline-block
 		vertical-align middle
 		position relative
-		
-	.btn__close
-		position absolute
-		top 10px
-		right 10px
+		border-radius 6px
+	
+	&__title
+		color $primary-color
+		font 1.5em $ABold
+		margin-bottom 40px	
+	
+	&__content
+		&--blocks
+			margin-bottom 40px
+		&--block
+			border-radius 6px
+			border 1px dashed $primary-color
+			padding 30px 40px
+			margin-bottom 20px
+			overflow hidden
+			&:first-child
+				padding 0
+				> .row
+					padding 50px 15px
+			&:last-child
+				margin-bottom 0
+	
 
+	.btn
+		width 100%
+		max-width 320px
+		span
+			text-align center
+			
+	.content
+		padding 0 15px
+		margin-bottom 40px
+
+.master__duty
+	background-color $primary-color
+	padding 25px 15px
+	border-bottom-left-radius 6px
+	border-bottom-right-radius 6px
+	margin 0 -1px -1px -1px
+	position relative
+	z-index 2
+	&--subtitle
+		font-family $ABold
+		padding-bottom 30px
+		margin-bottom 10px
+		position relative
+		&:before
+			pseudo()
+			position absolute
+			horisontal-center()
+			bottom 0
+			width 160px
+			height 8px
+			background-color $accent-color
+			
+
+	ol
+		counter-reset list
+		margin-left -10px
+		margin-right -10px
+
+		li
+			width 33.33333%
+			padding 10px
+			position relative
+			text-align left
+			font-size 0.95em
+			&:before
+				counter-increment list
+				content counter(list) ". " 
+				
+
+.highlighted
+	display inline-block
+	background-color $primary-color
+	color $light-color
+	outline 2px solid $primary-color
+	position relative
+	&:before
+		pseudo()
+		height 26px
+		width 100%
+		position absolute
+		vertical-center()
+		right 100%
+		background-color $primary-color
+				

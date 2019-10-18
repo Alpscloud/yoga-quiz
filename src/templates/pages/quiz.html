@@ -4,32 +4,30 @@
 	<!-- CONTENT WRAPPER -->
 	<div class="content__wrapper">
 
+		{% include '../_components/popup.html' %}
+
 		<!-- Header -->
 		{% include '../parts/header.html' %}
 		<!-- //Header -->
 
 		<!-- Main -->
 		<main class="main">
-			<!-- Quiz -->
+			<!-- Section Quiz -->
 			<section class="sect__quiz">
 				<h2 class="w3c">&nbsp;</h2>
+				<!-- QUIZ wrapper-->
+				<div class="quiz__wrapper js-quiz">
+					<!-- Quiz -->
+					<div class="quiz js-quiz">
+						<form class="js-form form">
+							<!-- Hidden inputs -->
+							<input type="hidden" name="project_name" value="On-line школа йоги САДХАНА">
+							<input type="hidden" name="form_subject" value="Quiz">
+							<!-- // Hidden inputs -->
 
-				<div class="container">
-					<!-- Quiz wrapper-->
-					<div class="quiz__wrapper text-center">
-
-						<!-- QUIZ -->
-						<div class="quiz js-quiz">
-
-							<form class="js-form form">
-
-								<!-- Hidden inputs -->
-								<input type="hidden" name="project_name" value="On-line школа йоги САДХАНА">
-								<input type="hidden" name="form_subject" value="Quiz">
-								<!-- // Hidden inputs -->
-
-								<!-- Quiz body -->
-								<div class="quiz__body">
+							<!-- Quiz body -->
+							<div class="quiz__body js-quiz-body">
+								<div class="container">
 									<!-- Quiz steps -->
 									<div class="quiz__steps">
 
@@ -116,7 +114,7 @@
 
 													<!-- Quiz next step button -->
 													<div class="quiz__controls text-left js-quiz-controls">
-														<button class="quiz__btn js-quiz-first-step-btn" type="button" data-quiz-direction="next"><span>Следующий шаг</span></button>
+														<button class="quiz__btn  is-disabled" type="button" data-quiz-direction="next" disabled><span>Следующий шаг</span></button>
 													</div>
 												</div>
 												<!-- //Answers -->
@@ -183,7 +181,7 @@
 
 													<input type="hidden" name="Вопрос 2" value="сколько вам лет?">
 
-													<h2 class="quiz__step--question-title">я хочу заниматься йогой чтобы:</h2>
+													<h2 class="quiz__step--question-title">сколько вам лет?</h2>
 
 													<div class="quiz__answers js-quiz-answers-second">
 
@@ -219,7 +217,7 @@
 
 													<!-- Quiz next step button -->
 													<div class="quiz__controls text-left js-quiz-controls">
-														<button class="quiz__btn js-quiz-first-step-btn" type="button" data-quiz-direction="next"><span>Следующий шаг</span></button>
+														<button class="quiz__btn  is-disabled" type="button" data-quiz-direction="next" disabled><span>Следующий шаг</span></button>
 													</div>
 												</div>
 												<!-- //Answers -->
@@ -228,12 +226,7 @@
 												<div class="quiz__step--info-col">
 													<div class="quiz__step--info-content">
 
-														<div class="quiz__step--info-content_start">
-															<div class="quiz__step--info-content_start-block">
-																<img src="img/budda.jpg" alt="">
-																<p>Начните отвечать, чтобы система начала<br>подбор программы занятий йогой </p>
-															</div>
-														</div>
+
 
 														<div class="quiz__step--info-content_block bg">
 															<div class="quiz__step--info-content_text">
@@ -330,7 +323,7 @@
 
 													<!-- Quiz next step button -->
 													<div class="quiz__controls text-left js-quiz-controls">
-														<button class="quiz__btn js-quiz-first-step-btn" type="button" data-quiz-direction="next"><span>Следующий шаг</span></button>
+														<button class="quiz__btn  is-disabled" type="button" data-quiz-direction="next" disabled><span>Следующий шаг</span></button>
 													</div>
 												</div>
 												<!-- //Answers -->
@@ -339,20 +332,26 @@
 												<div class="quiz__step--info-col">
 													<div class="quiz__step--info-content">
 
-														<div class="quiz__step--info-content_start">
-															<div class="quiz__step--info-content_start-block">
-																<img src="img/budda.jpg" alt="">
-																<p>Начните отвечать, чтобы система начала<br>подбор программы занятий йогой </p>
+														<div class="master__block">
+															<div class="content__sm text-left master__content">
+																<h3>Вы начинающий или уже практик?<br>практиковать йогу нужно с наставником!</h3>
+																<p>В соответствии с древними йогическими шастрами главный принцип йоги - передача знаний от учителя к ученику. Прямой контакт и непосредственное общение.</p>
+																<p>Практика йоги - мощная технология воздействия на тело, ум и сознание человека. При правильной практике приходят результаты.Не верное освоение асан, делают практику бесполезной.</p>
+																<p><b>Поэтому, ученики нашей школы записывают выполнение асан на видео и присылают своему наставнику.</b></p>
+																<p>Наставник, смотрит видео практики ученика, корректирует и отслеживает правильность по трём аспектам:</p>
+
+																<a href="#" class="link js-open-popup-btn"><span>читать далее</span></a>
+															</div>
+
+															<div class="master__info text-center">
+																<img src="img/master.png" alt="">
+																<p class="master__description"><b>19 лет - опыт занятий йогой<br>наставника он-лайн школы</b><br>Владислава Добровольского </p>
 															</div>
 														</div>
 
-														<div class="quiz__step--info-content_block bg">
-															<div class="quiz__step--info-content_text">
-																<p></p>
-															</div>
-														</div>
+														
 													</div>
-													
+
 													<div class="quiz__step--info-advantages">
 														<h6 class="quiz__step--info-advantages_title">По итогу теста Вы получите</h6>
 
@@ -416,7 +415,7 @@
 																<span class="quiz__answer quiz__answer--radio quiz__answer--radio-transparent"><span></span></span>
 															</label>
 															<span class="quiz__textarea--wrapper">
-																<textarea name="Проблемы со здоровьем" class="quiz__textarea js-quiz-textarea"></textarea>
+																<textarea name="Проблемы со здоровьем" class="quiz__textarea js-quiz-textarea" placeholder="Напишите ваши травмы и заболевания от которых вы хотите избавиться. А также особые условия, например послеродовой период."></textarea>
 															</span>	
 														</div>
 														<!-- //Quiz answer -->
@@ -428,14 +427,28 @@
 
 													<!-- Quiz next step button -->
 													<div class="quiz__controls text-left js-quiz-controls">
-														<button class="quiz__btn js-quiz-first-step-btn" type="button" data-quiz-direction="next"><span>Следующий шаг</span></button>
+														<button class="quiz__btn  is-disabled" type="button" data-quiz-direction="next" disabled><span>Следующий шаг</span></button>
 													</div>
 												</div>
 												<!-- //Answers -->
 
 												<!-- Information -->
 												<div class="quiz__step--info-col">
-													<div class="quiz__step--info-img bg" style="background-image: url('img/quiz/question-2/1.png');"></div>
+													<div class="quiz__step--info-content no-gutters quiz__step--info-col_row">
+														<div class="row align-vertical-stretch row-nowrap">
+															<div class="content__sm text-left">
+																<h3>Такого нет ни в одной он-лайн школе!</h3>
+																<p><i>Как проходят занятия с наставником</i></p>
+																<p>Благодаря своему опыту, наставник вносит корректировки в практику ученика при наличии ограничений или противопоказаний.</p>
+																<p>Подбирает ту последовательность асан, которая будет наиболее эффективно способствовать его выздоровлению. Заменяет упражнения, которые ученик не может выполнить физически, на более простые.</p>
+																<p>С наставником, ученики имеющие проблемы со здоровьем  осваивают практику безопасно и эффективно, поэтому в итоге получают хороший результат.</p>
+																<p>Мы дарим вам пакет занятий йогой с наставником на 1 месяц. Пакет включает в себя подобранные для вас видео уроки и 2 индивидуальных on-line занятия.</p>
+																<p>В течение месяца вы почувствуете всю силу практик разработанных мастером йоги С.С.Сарасвати - основателя Бихарской школы йоги.</p>
+															</div>
+
+															<div class="content__img bg" style="background-image: url('img/girl.png');"></div>
+														</div>
+													</div>
 													<div class="quiz__step--info-advantages">
 														<h6 class="quiz__step--info-advantages_title">По итогу теста Вы получите</h6>
 
@@ -467,21 +480,98 @@
 
 									</div>
 									<!-- //Quiz steps -->
+								</div>
+								<!-- //container -->
+							</div>
+							<!-- // Quiz body-->
+
+							<!-- Quiz final -->
+							<div class="quiz__final js-quiz-final">
+								<div class="container">
+
+									<div class="quiz__final--content">
+										<div class="quiz__final--content-block">
+											<div class="quiz__progress">
+												<span class="quiz__progress--line js-quiz-progress-line" style="width: 97%"></span>
+												<span class="quiz__progress--counter quiz__progress--counter-light">5 из 5</span>
+											</div>
+
+											<div class="quiz__final--title-block">
+												<h2 class="quiz__final--title">Ваша программа сформирована</h2>
+
+												<p class="quiz__final--text">Программа по Вашим параметрам сформирована</p>
+											</div>
+
+											<div class="quiz__final--methods">
+												<p>Куда Вам удобно получить программу занятий йогой и ссылку на видео запись первого урока?</p>
+
+												<div class="row row-nowrap align-horisontal-center quiz__methods--row">
+													<label class="quiz__method--label">
+														<span class="quiz__method--ic quiz__method--ic-whatsapp" style="background-image: url('img/icons/svg/whatsapp.svg');"></span>
+														<input type="radio" name="Способ связи" value="whatsapp" data-quiz-method="messanger">
+														<span class="quiz__method"></span>
+													</label>
+
+													<label class="quiz__method--label">
+														<span class="quiz__method--ic quiz__method--ic-viber" style="background-image: url('img/icons/svg/viber.svg');"></span>
+														<input type="radio" name="Способ связи" value="viber" data-quiz-method="messanger">
+														<span class="quiz__method"></span>
+													</label>
+
+													<label class="quiz__method--label">
+														<span class="quiz__method--ic quiz__method--ic-telegram" style="background-image: url('img/icons/svg/telegram.svg');"></span>
+														<input type="radio" name="Способ связи" value="telegram" data-quiz-method="messanger">
+														<span class="quiz__method"></span>
+													</label>
+
+													<label class="quiz__method--label">
+														<span class="quiz__method--ic quiz__method--ic-email" style="background-image: url('img/icons/svg/email.svg');"></span>
+														<input type="radio" name="Способ связи" value="email" data-quiz-method="email">
+														<span class="quiz__method"></span>
+													</label>
+												</div>
+
+												<div class="quiz__final--inputs">
+													<div class="quiz__input--wrapper">
+														<input type="text" name="Номер" class="quiz__input js-input js-input-phone" placeholder="_ (___) ___-__-__">
+													</div>
+													<div class="quiz__input--wrapper">
+														<button class="btn__wide btn__submit btn__accent">
+															<span class="btn__content">Получить программу занятий и видео запись первого урока</span>
+														</button>
+													</div>
+
+													<div class="quiz__input--wrapper">
+														<label class="quiz__checkbox--label">
+															<input type="checkbox" name="Согласие на обработку персональных данных" checked>
+															<span class="quiz__checkbox">Даю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="quiz__final--img">
+											<img src="img/final-img-1.png" alt="">
+											<h3 class="author__name">Добровольский Владислав</h3>
+											<p class="author__position">наставник on-line школы йоги<br>Садхана</p>
+										</div>
+
+									</div>
+									
 
 								</div>
-								<!-- //Quiz body -->
+								<!-- //container -->
+							</div>
+							<!-- //Quiz final -->
 
-								
-							</form>
-
-						</div>
-						<!-- //QUIZ -->
-
+						</form>
 					</div>
-					<!-- //Quiz wrapper-->
+					<!-- //Quiz -->
 				</div>
+				<!-- //QUIZ wrapper-->
 			</section>
-			<!-- //Quiz -->
+			<!-- // Section Quiz -->
 		</main>
 		<!-- //Main -->
 
