@@ -254,7 +254,13 @@ $(".btn, .quiz__btn, .btn__submit").append('<span class="anim-btn1 animate1"></s
 			}
 			z = Math.round(Math.random() * A.width() - A.width() / 2);
 			D = Math.round(Math.random() * A.height() - A.height() / 2);
-			A.css({top: D + "px", left: z + "px"}).addClass("animate1");
+			A.css({
+				'transform': 'translate(' + D + 'px' + ', ' + z + 'px' + ')',
+				'-webkit-transform': 'translate(' + D + 'px' + ', ' + z + 'px' + ')',
+				'-o-transform': 'translate(' + D + 'px' + ', ' + z + 'px' + ')',
+				'-moz-transform': 'translate(' + D + 'px' + ', ' + z + 'px' + ')',
+				'-ms-transform': 'translate(' + D + 'px' + ', ' + z + 'px' + ')'
+			}).addClass("animate1");
 		}, 1000);
 	});
 
