@@ -7,6 +7,9 @@
 	color $text-color
 	max-width 550px
 	border-radius 6px
+	
+	position relative
+	overflow hidden
 	&__accent
 		background-color $accent-color
 		animation pulse 1s cubic-bezier(0, 0.04, 0.46, 1.34) infinite
@@ -45,6 +48,8 @@
 		background url('../img/icons/svg/close-ic.svg') 50% 50% no-repeat / 23px 23px
 
 	&__submit
+		position relative
+		overflow hidden
 		.btn__content
 			font-size 20px
 			padding-left 80px
@@ -57,3 +62,21 @@
 		transform scale(1, 1)
 	100%
 		transform scale(1.01,1.01)
+		
+
+
+.animate1
+	animation ripple .5s linear
+
+.anim-btn1
+	display block
+	position absolute
+	background-color rgba(255,255,255,.3)
+	border-radius 100%
+	transform scale(0)
+
+
+@keyframes ripple
+	100%
+		opacity 0
+		transform scale(3)

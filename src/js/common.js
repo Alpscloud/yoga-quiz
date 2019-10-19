@@ -238,5 +238,26 @@ $('.js-form').submit(function(e) {
 $('.js-input-phone').mask('+7 (999) 999-99-99');
 // ========= =========== =========== ===========
 
+$(".btn, .quiz__btn, .btn__submit").append('<span class="anim-btn1 animate1"></span>');
+     $(".btn, .quiz__btn, .btn__submit").each(function() {
+		var B = $(this);
+		var A, C, z, D;
+		setInterval(function() {
+			if (B.find(".anim-btn1").length===0) {
+				B.prepend("<span class='anim-btn1'></span>");
+			} 
+			A = B.find(".anim-btn1");
+			A.removeClass("animate1");
+			if (!A.height() && !A.width()) {
+				C = Math.max(B.outerWidth(), B.outerHeight());
+				A.css({height: C, width: C});
+			}
+			z = Math.round(Math.random() * A.width() - A.width() / 2);
+			D = Math.round(Math.random() * A.height() - A.height() / 2);
+			A.css({top: D + "px", left: z + "px"}).addClass("animate1");
+		}, 1000);
+	});
+
+
 
 });
