@@ -23,7 +23,7 @@
 						<form class="js-form form">
 							<!-- Hidden inputs -->
 							<input type="hidden" name="project_name" value="On-line школа йоги САДХАНА">
-							<input type="hidden" name="form_subject" value="Quiz">
+							<input type="hidden" name="form_subject" value="Квиз">
 							<!-- // Hidden inputs -->
 
 							<!-- Quiz body -->
@@ -539,8 +539,17 @@
 													</div>
 
 													<div class="quiz__final--inputs js-quiz-inputs-socials">
+														<div class="quiz__final--inputs-hidden">
+															<div class="quiz__input--wrapper">
+																<input type="email" name="Email" class="quiz__input js-input" placeholder="Введите Вашу почту">
+																<span class="quiz__input--error">Заполните поле</span>
+															</div>
+															<div class="quiz__input--wrapper">
+																<p class="quiz__input--label">За Вашим номером будет забронирован подарочный месяц занятий с наставником</p>
+															</div>
+														</div>
 														<div class="quiz__input--wrapper">
-															<input type="text" name="Номер" class="quiz__input js-input-phone js-input" placeholder="_ (___) ___-__-__">
+															<input type="text" name="phone" class="quiz__input js-input-phone js-input" placeholder="_ (___) ___-__-__">
 															<span class="quiz__input--error">Заполните поле</span>
 														</div>
 														<div class="quiz__input--wrapper">
@@ -557,31 +566,7 @@
 														</div>
 													</div>
 
-													<div class="quiz__final--inputs js-quiz-inputs-email">
-														<div class="quiz__input--wrapper">
-															<input type="email" name="Email" class="quiz__input js-input" placeholder="Введите Вашу почту">
-															<span class="quiz__input--error">Заполните поле</span>
-														</div>
-														<div class="quiz__input--wrapper">
-															<p class="quiz__input--label">За Вашим номером будет забронирован подарочный месяц занятий с наставником</p>
-														</div>
-														<div class="quiz__input--wrapper">
-															<input type="text" name="Телефон" class="quiz__input js-input-phone js-input" placeholder="Введите Ваш телефон">
-															<span class="quiz__input--error">Заполните поле</span>
-														</div>
-														<div class="quiz__input--wrapper">
-															<button class="btn__wide btn__submit btn__accent" type="submit">
-																<span class="btn__content">Получить программу занятий и видео запись первого урока</span>
-															</button>
-														</div>
-
-														<div class="quiz__input--wrapper">
-															<label class="quiz__checkbox--label">
-																<input type="checkbox" name="Согласие на обработку персональных данных" checked>
-																<span class="quiz__checkbox">Даю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</span>
-															</label>
-														</div>
-													</div>
+												
 
 													<div class="quiz__final--methods-img">
 														<img src="img/budda-accent.png" alt="">

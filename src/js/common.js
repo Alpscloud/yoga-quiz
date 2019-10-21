@@ -152,33 +152,13 @@ $(document).ready(function() {
 		var method = $(this).attr('data-quiz-method');
 
 		$('.quiz__input').removeClass('is-error');
+		$('.js-quiz-inputs-socials').stop().slideDown(200);
 
 		if(method === 'messanger') {
-
-			$('.js-quiz-inputs-email').find('.quiz__input').each(function() {
-				$(this).removeClass('js-input');
-			});
-
-			$('.js-quiz-inputs-email').hide();
-
-			$('.js-quiz-inputs-socials').find('.quiz__input').each(function() {
-				$(this).addClass('js-input');
-			});
-
-			$('.js-quiz-inputs-socials').stop().slideDown(200);
+			$('.quiz__final--inputs-hidden').stop().slideUp(150);
 
 		} else if(method === 'email') {
-			$('.js-quiz-inputs-socials').find('.quiz__input').each(function() {
-				$(this).removeClass('js-input');
-			});
-
-			$('.js-quiz-inputs-socials').hide();
-			
-			$('.js-quiz-inputs-email').find('.quiz__input').each(function() {
-				$(this).addClass('js-input');
-			});
-
-			$('.js-quiz-inputs-email').stop().slideDown(200);
+			$('.quiz__final--inputs-hidden').stop().slideDown(150);
 		}
 	});
 
@@ -243,6 +223,8 @@ $('.js-form').submit(function(e) {
 	});
 
 	if(!flag) {return false;}
+
+	console.log(1);
 	
 
 	$.ajax({
@@ -261,7 +243,7 @@ $('.js-form').submit(function(e) {
 // ========= =========== =========== ===========
 
 // ========= In p u t   t e l e p h o n e   m a s k ===========
-$('.js-input-phone').mask("+9(999)-999-99-99",{placeholder:" "});
+$('.js-input-phone').mask("9(999)-999-99-99",{placeholder:" "});
 // ========= =========== =========== ===========
 
 $(".btn, .quiz__btn, .btn__submit").append('<span class="anim-btn1 animate1"></span>');

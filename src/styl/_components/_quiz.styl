@@ -436,7 +436,7 @@ $quiz-progress-border-color = #6f4170
 				visibility visible
 				
 		&--wrapper
-			margin-bottom 20px
+			margin-bottom 30px
 			position relative
 			&:last-child
 				margin-bottom 0
@@ -446,8 +446,9 @@ $quiz-progress-border-color = #6f4170
 			font 14px $AReg
 			display inline-block
 			position absolute
-			right 15px
-			vertical-center()
+			left 25px
+			top 100%
+			margin-top 5px
 			opacity 0
 			pointer-events none
 			visibility hidden
@@ -459,13 +460,13 @@ $quiz-progress-border-color = #6f4170
 			font 16px $ABold
 			margin-bottom 15px
 	&__final
-		padding-bottom 270px
+		padding-bottom 290px
 		padding-top 50px
 		
 		&--wrapper
 			position relative
 			background linear-gradient(to bottom, $quiz-primary-color 0%, $quiz-primary-color 100%) no-repeat
-			background-position center top 330px
+			background-position center top 350px
 			background-size 100% 800px
 			min-height 670px
 			// padding-bottom 270px
@@ -548,6 +549,8 @@ $quiz-progress-border-color = #6f4170
 		&--inputs
 			padding 25px 25px 0 25px
 			display none
+			&-hidden
+				display none
 			
 	&__success
 		display none
