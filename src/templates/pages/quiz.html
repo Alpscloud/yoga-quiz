@@ -5,6 +5,7 @@
 	<div class="content__wrapper">
 
 		{% include '../_components/popup.html' %}
+		{% include '../_components/popup-policy.html' %}
 
 		<!-- Header -->
 		{% include '../parts/header.html' %}
@@ -334,9 +335,9 @@
 
 														<div class="master__block">
 															<div class="content__sm text-left master__content">
-																<h3>Вы начинающий или уже практик?<br>практиковать йогу нужно с наставником!</h3>
+																<h3>Вы начинающий или уже практик?<br>Практиковать йогу нужно с наставником!</h3>
 																<p>В соответствии с древними йогическими шастрами главный принцип йоги - передача знаний от учителя к ученику. Прямой контакт и непосредственное общение.</p>
-																<p>Практика йоги - мощная технология воздействия на тело, ум и сознание человека. При правильной практике приходят результаты.Не верное освоение асан, делают практику бесполезной.</p>
+																<p>Практика йоги - мощная технология воздействия на тело, ум и сознание человека. При правильной практике приходят результаты. Не верное освоение асан, делают практику бесполезной.</p>
 																<p><b>Поэтому, ученики нашей школы записывают выполнение асан на видео и присылают своему наставнику.</b></p>
 																<p>Наставник, смотрит видео практики ученика, корректирует и отслеживает правильность по трём аспектам:</p>
 
@@ -510,24 +511,28 @@
 													<div class="row row-nowrap align-horisontal-center quiz__methods--row">
 														<label class="quiz__method--label">
 															<span class="quiz__method--ic quiz__method--ic-whatsapp" style="background-image: url('img/icons/svg/whatsapp.svg');"></span>
+															<span class="quiz__method--label-text">WhatsApp</span>
 															<input type="radio" name="Способ связи" value="whatsapp" data-quiz-method="messanger">
 															<span class="quiz__method"></span>
 														</label>
 
 														<label class="quiz__method--label">
 															<span class="quiz__method--ic quiz__method--ic-viber" style="background-image: url('img/icons/svg/viber.svg');"></span>
+															<span class="quiz__method--label-text">Viber</span>
 															<input type="radio" name="Способ связи" value="viber" data-quiz-method="messanger">
 															<span class="quiz__method"></span>
 														</label>
 
 														<label class="quiz__method--label">
 															<span class="quiz__method--ic quiz__method--ic-telegram" style="background-image: url('img/icons/svg/telegram.svg');"></span>
+															<span class="quiz__method--label-text">Telegram</span>
 															<input type="radio" name="Способ связи" value="telegram" data-quiz-method="messanger">
 															<span class="quiz__method"></span>
 														</label>
 
 														<label class="quiz__method--label">
 															<span class="quiz__method--ic quiz__method--ic-email" style="background-image: url('img/icons/svg/email.svg');"></span>
+															<span class="quiz__method--label-text">Email</span>
 															<input type="radio" name="Способ связи" value="email" data-quiz-method="email">
 															<span class="quiz__method"></span>
 														</label>
@@ -535,7 +540,8 @@
 
 													<div class="quiz__final--inputs js-quiz-inputs-socials">
 														<div class="quiz__input--wrapper">
-															<input type="text" name="Номер" class="quiz__input js-input-phone" placeholder="_ (___) ___-__-__">
+															<input type="text" name="Номер" class="quiz__input js-input-phone js-input" placeholder="_ (___) ___-__-__">
+															<span class="quiz__input--error">Заполните поле</span>
 														</div>
 														<div class="quiz__input--wrapper">
 															<button class="btn__wide btn__submit btn__accent" type="submit">
@@ -553,11 +559,15 @@
 
 													<div class="quiz__final--inputs js-quiz-inputs-email">
 														<div class="quiz__input--wrapper">
-															<input type="email" name="Email" class="quiz__input" placeholder="Введите Вашу почту">
+															<input type="email" name="Email" class="quiz__input js-input" placeholder="Введите Вашу почту">
+															<span class="quiz__input--error">Заполните поле</span>
 														</div>
 														<div class="quiz__input--wrapper">
 															<p class="quiz__input--label">За Вашим номером будет забронирован подарочный месяц занятий с наставником</p>
-															<input type="text" name="Телефон" class="quiz__input js-input-phone" placeholder="Введите Ваш телефон">
+														</div>
+														<div class="quiz__input--wrapper">
+															<input type="text" name="Телефон" class="quiz__input js-input-phone js-input" placeholder="Введите Ваш телефон">
+															<span class="quiz__input--error">Заполните поле</span>
 														</div>
 														<div class="quiz__input--wrapper">
 															<button class="btn__wide btn__submit btn__accent" type="submit">
@@ -628,9 +638,9 @@
 													<p>Подписыватесь на наши соц. сети, чтобы быть в курсе последних новостей</p>
 
 													<ul class="socials">
-														<li class="socials__item"><a href="#" target="_blank" class="socials__link" style="background-image: url('img/icons/svg/socials/instagram.svg');"></a></li>
-														<li class="socials__item"><a href="#" target="_blank" class="socials__link" style="background-image: url('img/icons/svg/socials/facebook.svg');"></a></li>
-														<li class="socials__item"><a href="#" target="_blank" class="socials__link" style="background-image: url('img/icons/svg/socials/vk.svg');"></a></li>
+														<li class="socials__item"><a href="https://www.instagram.com/sadhanayogaonline" target="_blank" class="socials__link" style="background-image: url('img/icons/svg/socials/instagram.svg');"></a></li>
+														<li class="socials__item"><a href="https://www.facebook.com/sadhanayogaonline" target="_blank" class="socials__link" style="background-image: url('img/icons/svg/socials/facebook.svg');"></a></li>
+														<li class="socials__item"><a href="https://vk.com/sadhanayogaonline" target="_blank" class="socials__link" style="background-image: url('img/icons/svg/socials/vk.svg');"></a></li>
 													</ul>
 												</div>
 											</div>

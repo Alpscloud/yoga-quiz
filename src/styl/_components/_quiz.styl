@@ -431,10 +431,28 @@ $quiz-progress-border-color = #6f4170
 			border-color $quiz-primary-color
 		&.is-error
 			border-color red
+			~ span
+				opacity 1
+				visibility visible
+				
 		&--wrapper
 			margin-bottom 20px
+			position relative
 			&:last-child
 				margin-bottom 0
+				
+		&--error
+			color red
+			font 14px $AReg
+			display inline-block
+			position absolute
+			right 15px
+			vertical-center()
+			opacity 0
+			pointer-events none
+			visibility hidden
+			transition all .17s ease-in-out
+			
 		
 		&--label
 			color $quiz-accent-color
@@ -571,6 +589,10 @@ $quiz-progress-border-color = #6f4170
 			cursor pointer
 			width 25%
 			padding 12.5px 12.5px 0 12.5px
+			&-text
+				font-size 12px
+				display inline-block
+				margin-bottom 7px
 			input
 				display none
 				&:checked + span
@@ -584,7 +606,7 @@ $quiz-progress-border-color = #6f4170
 			border-radius 6px
 			width 72px
 			height 72px
-			margin 0 auto 14px auto
+			margin 0 auto 7px auto
 			&-whatsapp
 				background-color #7fc241
 			&-viber

@@ -7,10 +7,16 @@ $(document).ready(function() {
 		$('html').addClass('is-fixed');
 	});
 
+	$('.js-open-policy-popup-btn').on('click',function(e) {
+		e.preventDefault();
+		$('.js-popup-policy').fadeIn(300);
+		$('html').addClass('is-fixed');
+	});
+
 
 	$('.js-close-popup-btn').on('click',function(e) {
 		e.preventDefault();
-		$(this).parents('.js-popup').fadeOut(300);
+		$(this).parents('.popup').fadeOut(300);
 		$('html').removeClass('is-fixed');
 	});
 
@@ -21,7 +27,7 @@ $(document).ready(function() {
 
 		if(!content.is(e.target) && content.has(e.target).length === 0) {
 			$('html').removeClass('is-fixed');
-			$('.js-popup').fadeOut(300);
+			$('.popup').fadeOut(300);
 		}
 
 	});
@@ -29,7 +35,10 @@ $(document).ready(function() {
 
 // =========== Variables
 	var quizStep = $('.js-quiz-step'), // quiz step
-			quizControls = quizStep.find($('.js-quiz-controls')); //quiz control buttons; 
+			quizControls = quizStep.find($('.js-quiz-controls')); //quiz control buttons;
+
+	var windowWidth = $('body').width();
+
 	// ===============================
 
 
@@ -118,15 +127,25 @@ $(document).ready(function() {
 	quizStep.last().find('.js-quiz-controls').on('click', function(e) {
 		e.preventDefault();
 		e.stopPropagation();
-
+		var top = $('.js-quiz-body').offset().top;
 		var btn = $(e.target);
+
+
 
 		if(btn.prop('tagName') !== 'BUTTON') {return};
 
 		$('.js-quiz-body').hide();
 		$('.js-quiz-result').fadeIn();
+
+		if(windowWidth < 767) {
+			$('html, body').animate({scrollTop: top}, 170);
+		}
 	});
 
+
+	$('.js-quiz-textarea').on('focus', function() {
+		$(this).parents('.quiz__answer--wrapper-block').find('input[type=radio]').prop('checked', true).trigger('change');
+	});
 
 
 	$('.quiz__methods--row input[type=radio]').on('change', function() {
@@ -162,6 +181,8 @@ $(document).ready(function() {
 			$('.js-quiz-inputs-email').stop().slideDown(200);
 		}
 	});
+
+
 	// =========== Show next / prev quiz step
 	
 
@@ -169,6 +190,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		e.stopPropagation();
 
+		var top = $('.js-quiz-body').offset().top;
 		var btn = $(e.target);
 		var flag;
 
@@ -186,9 +208,13 @@ $(document).ready(function() {
 
 		if(!flag) {return};
 
-
 		btn.parents('.js-quiz-step').removeClass('is-active').hide();
 		btn.parents('.js-quiz-step').next().addClass('is-active').fadeIn();
+
+		if(windowWidth < 767) {
+			$('html, body').animate({scrollTop: top}, 170);
+		}
+	
 
 	});
 
@@ -196,7 +222,7 @@ $(document).ready(function() {
 	
 	
 // ========= Ajax form ===========
-$('.js-input').on('focus',function() {
+$('.js-input').on('focus', function() {
 	if($(this).hasClass('is-error')) {
 		$(this).removeClass('is-error');
 	}
@@ -235,7 +261,7 @@ $('.js-form').submit(function(e) {
 // ========= =========== =========== ===========
 
 // ========= In p u t   t e l e p h o n e   m a s k ===========
-$('.js-input-phone').mask('+7 (999) 999-99-99');
+$('.js-input-phone').mask("+9(999)-999-99-99",{placeholder:" "});
 // ========= =========== =========== ===========
 
 $(".btn, .quiz__btn, .btn__submit").append('<span class="anim-btn1 animate1"></span>');

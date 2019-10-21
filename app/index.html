@@ -11,17 +11,13 @@
 	<meta name="keywords" content="">
 	<meta name="author" content="Serhii 'winde' Kuptsov">
 
-	<!-- Chrome, Firefox, Opera -->
-	<meta name="theme-color" content="#fbce19">
-	<!-- Windows Phone -->
-	<meta name="msapplication-navbutton-color" content="#fbce19">
-	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#fbce19">
-	<!-- //Meta tags -->
-	
-	<!-- Favicons -->
-	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-	<!-- //Favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#ffc40d">
+	<meta name="theme-color" content="#ffffff">
 
 	<!-- All libs styles -->
 <!-- 	<link rel="stylesheet" href="css/libs.min.css"> -->
@@ -44,10 +40,10 @@
 	<div class="container">
 		<div class="row align-vertical-center align-horisontal-between">
 			<!-- Logo -->
-			<a href="/" class="logo">
+			<div class="logo">
 				<img src="img/logo.png" alt="" class="logo__img">
 				<span class="logo__text">on-line ШКОЛА ЙОГИ<br>САДХАНА</span>
-			</a>
+			</div>
 			<!-- //Logo -->
 
 			<h1 class="title text-right">Быстрый on-line - Тест по подбору<br>программы занятий йогой дома</h1>
@@ -143,14 +139,23 @@
 
 				<div class="col__3  col ">
 					<p class="footer__text">Все данные защищены.</p>
-					<p class="footer__text"><a href="#">Политика конфиденциальности</a></p>
+					<p class="footer__text"><a href="#" class="js-open-policy-popup-btn">Политика конфиденциальности</a></p>
 				</div>
 
 				<div class="col__4 col column align-vertical-start">
 					<div class="footer__contacts">
 						<div class="footer__contacts--phones column">
 							<a href="tel:+88002500734" class="footer__contacts--phones-link">8-800-25-007-34</a>
-							<a href="tel:+79117019307" class="footer__contacts--phones-link footer__contacts--phones-link_messangers"><span>+7 (911) 701-93-07</span></a>
+							<p class="footer__contacts--phones-link_wrapper">
+
+								<span class="footer__contacts--phones-link_messangers">
+									<a href="whatsapp://send?phone=+79117019307" class="footer__contacts--phones-link_messanger footer__contacts--phones-link_whatsapp"></a>
+									<a href="viber://chat?number=+79117019307" class="footer__contacts--phones-link_messanger footer__contacts--phones-link_viber"></a>
+								</span>
+
+								<a href="tel:+79117019307" class="footer__contacts--phones-link"><span>+7 (911) 701-93-07</span></a>
+							</p>
+							
 							<p class="footer__text"><a href="mailto:info@sadhana-yoga.online">info@sadhana-yoga.online</a></p>
 						</div>
 						<p class="footer__text">Санкт-Петербург, <br>пр. Художников дом 33/4</p>
@@ -171,7 +176,7 @@
 					<p class="copyright">&copy; on-line школа йоги<br>САДХАНА</p>
 				</div>
 				<div class="col__4 col">
-					<p class="developer">Разработка сайта <a href="#" target="_blank" class="developer">quiz24.ru</a></p>
+					<p class="developer">Разработка сайта <a href="http://quiz24.ru/" target="_blank" class="developer">quiz24.ru</a></p>
 				</div>
 			</div>
 		</div>

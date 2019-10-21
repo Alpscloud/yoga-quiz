@@ -22,19 +22,44 @@
 			font-family $ABold
 			&:hover
 				color $accent-color
+			&_wrapper
+				position relative
+				padding-left 58px
+				margin-left -58px
 			&_messangers
-				span
-					display inline-block
-					position relative 
-					&:before
-						pseudo()
-						position absolute
-						right 100%
-						vertical-center()
-						width 58px
-						height 25px
-						background url('../img/icons/messangers.png') 50% 50% no-repeat / 58px 25px
-						margin-right 5px
+				position absolute
+				left 0
+				vertical-center()
+				width 58px
+				height 25px
+				margin-right 6px
+			&_messanger
+				display inline-block
+				width 25px
+				height 25px
+				background-image url('../img/icons/messangers.png')
+				background-repeat no-repeat
+				&:hover
+					opacity .7
+				
+				
+			&_whatsapp
+				background-position 0 0
+			&_viber
+				background-position -33px 0
+				
+				// span
+				// 	display inline-block
+				// 	position relative 
+				// 	&:before
+				// 		pseudo()
+				// 		position absolute
+				// 		right 100%
+				// 		vertical-center()
+				// 		width 58px
+				// 		height 25px
+				// 		background url('../img/icons/messangers.png') 50% 50% no-repeat / 58px 25px
+				// 		margin-right 5px
 				
 	&__bottom
 		background-color $footer-primary-bg
